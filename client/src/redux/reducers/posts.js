@@ -8,13 +8,13 @@ export default function postsReducers(state = INIT_STATE.posts, action) {
                 ...state,
                 isLoading: true
             }
-        case getType(getPosts.getPostSuccess):
+        case getType(getPosts.getPostsSuccess):
             return {
                 ...state,
                 isLoading: false,
                 data: action.payload
             }
-        case getType(getPosts.getPostFailure):
+        case getType(getPosts.getPostsFailure):
             return {
                 ...state,
                 isLoading: false,

@@ -6,9 +6,15 @@ export const getType = (reduxAction) => {
 
 export const getPosts = createActions({
     getPostsRequest: undefined,
-    getPostSuccess: (payload) => payload,
-    getPostFailure: (err) => err,
-})
+    getPostsSuccess: (payload) => payload,
+    getPostsFailure: (err) => err,
+});
 
 export const showModal = createAction('SHOW_CREATE_POST_MODAL');
 export const hideModal = createAction('HIDE_CREATE_SHOW_MODAL');
+
+export const createPost = createActions({
+    createPostRequest: (payload) => payload,
+    createPostSuccess: (payload) => payload,
+    createPostFailure: (err) => err,
+})
